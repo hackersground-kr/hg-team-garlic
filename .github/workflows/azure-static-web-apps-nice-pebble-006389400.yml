@@ -32,13 +32,6 @@ jobs:
         run: bun vite build --outDir dist
 
       - name: Deploy to Azure Static Web Apps
-        id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_NICE_PEBBLE_006389400 }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          action: "upload"
-          app_location: "./web"  # 앱의 소스 코드 경로
-          api_location: ""       # API 소스 코드 경로 (optional)
-          output_location: "dist" # 빌드 결과물 경로
-          skip_app_build: true   # Azure Static Web Apps의 기본 빌드 프로세스 무시
+        run: |
+          npm install -g @azure/static-web-apps-cli
+          swa deploy ./dist --api-location ./api --env production --app-name ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_NICE_PEBBLE_006389400 }}
