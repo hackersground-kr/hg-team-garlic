@@ -1,14 +1,24 @@
-import IonIcon from "@reacticons/ionicons";
+import useGetSupport from "../../hooks/support/useGetSupport";
 import * as S from "./style";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Support = () => {
-  const [condition, setCondition] = useState<"NEW"|"MONEY">("NEW");
+  const [condition, setCondition] = useState<"FARMING"|"JOB"|"ECONOMY"|"EDUCATION"|"ENVIRONMENT">("FARMING");
+  const { ...support } = useGetSupport();
 
   const changeCondition = (condition:string) => {
-    setCondition(condition as "NEW"|"MONEY");
+    setCondition(
+      condition as "FARMING" | "JOB" | "ECONOMY" | "EDUCATION" | "ENVIRONMENT"
+    );
   }
 
+  const linkTo = (url:string) => {
+    window.open(url);
+  }
+
+  useEffect(()=>{
+    support.getSupport(condition);
+  },[condition]);
 
   return (
     <S.Container>
@@ -19,41 +29,55 @@ const Support = () => {
       </S.Head>
       <S.PostWrap>
         <S.PostList>
-          <S.Post>
-            <S.PostTitle>[의성군] 청년 농부 지원사업</S.PostTitle>
-            <S.PostExpire>2024-10-31</S.PostExpire>
-          </S.Post>
-          <S.Post>
-            <S.PostTitle>[서울특별시] 도시농부 시원사업</S.PostTitle>
-            <S.PostExpire>2024-12-25</S.PostExpire>
-          </S.Post>
+          {support.supportData && support.supportData.map((item) => (
+            <S.Post onClick={()=>{linkTo(item.url)}}>
+              <S.PostTitle>{`[${item.host}] ${item.title}`}</S.PostTitle>
+              <S.PostExpire>{item.deadline}</S.PostExpire>
+            </S.Post>
+          ))}
         </S.PostList>
       </S.PostWrap>
       <S.FilterWrap>
         <S.Select
-          $selected={condition === "NEW"}
+          $selected={condition === "FARMING"}
           onClick={() => {
-            changeCondition("NEW");
+            changeCondition("FARMING");
           }}
         >
-          최신순
+          농사
         </S.Select>
         <S.Select
-          $selected={condition === "MONEY"}
+          $selected={condition === "JOB"}
           onClick={() => {
-            changeCondition("MONEY");
+            changeCondition("JOB");
           }}
         >
-          지원금 순
+          직업
         </S.Select>
-        <S.SearchWrap>
-          <S.Search type="search" placeholder="검색" />
-          <IonIcon
-            name="search-outline"
-            size="large"
-            style={{ fontSize: "1.3rem", cursor: "pointer" }}
-          />
-        </S.SearchWrap>
+        <S.Select
+          $selected={condition === "ECONOMY"}
+          onClick={() => {
+            changeCondition("ECONOMY");
+          }}
+        >
+          경제
+        </S.Select>
+        <S.Select
+          $selected={condition === "EDUCATION"}
+          onClick={() => {
+            changeCondition("EDUCATION");
+          }}
+        >
+          교육
+        </S.Select>
+        <S.Select
+          $selected={condition === "ENVIRONMENT"}
+          onClick={() => {
+            changeCondition("ENVIRONMENT");
+          }}
+        >
+          환경
+        </S.Select>
       </S.FilterWrap>
     </S.Container>
   );

@@ -21,10 +21,8 @@ const Main = () => {
   useEffect(()=>{
     if(user.user && user.user.analysis.location) {
       land.getLands(user.user.analysis.location);
-    }else{
-      land.getLands('');
-      location.getLocation();
     }
+    location.getLocation();
     book.getBooks();
   },[user.user]);
 
