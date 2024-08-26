@@ -11,7 +11,6 @@ export const Container = styled.div`
   padding:2rem;
 `
 export const LogoWrap = styled.div`
-  width:22rem;
   display:flex;
   align-items:center;
 `

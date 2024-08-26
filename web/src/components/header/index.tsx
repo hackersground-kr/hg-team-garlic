@@ -32,7 +32,7 @@ const Header = () => {
     <S.Container>
       <S.LogoWrap>
         <S.Logo src="/assets/logo.svg" alt="" />
-        <h1 style={{fontWeight:600}}>슬기로운 농사 생활</h1>
+        <h1 style={{fontWeight:600}}>굿팜</h1>
       </S.LogoWrap>
     </S.Container>
   );
