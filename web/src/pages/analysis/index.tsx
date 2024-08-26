@@ -7,7 +7,7 @@ const Analysis = () => {
   return (
     <S.Container>
       <S.LogoWrap>
-        <S.Logo src="/assets/logo.svg" alt="" />
+        <S.Logo src="/assets/logo.png" alt="" />
         <S.Title>당신에게 맞는 최적의 정보를 위해 몇가지 사항을 확인하겠습니다</S.Title>
       </S.LogoWrap>
       <S.ButtonWrap>

@@ -15,6 +15,5 @@ export const LogoWrap = styled.div`
   align-items:center;
 `
 export const Logo = styled.img`
-  width: 6rem;
-  margin-right:1rem;
+  width: 10rem;
 `;

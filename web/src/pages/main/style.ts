@@ -39,13 +39,30 @@ export const ProvinceScroll = styled.div`
   display:flex;
   height: 100%;
 `;
-export const ProvinceBox = styled.div`
+export const ProvinceBox = styled.div<{$url:string}>`
   width: 27rem;
   height: 27rem;
-  background-color:#F1F1F1;
+  background:url($url) no-repeat center;
+  background-size:cover;
   border-radius:1rem;
   margin:2rem;
 `
+export const ProvinceBoxHover = styled.div`
+  background-color:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center; 
+  font-size:1.5rem;
+  transition:all 0.5s;
+  width:100%;
+  height:100%;
+  border:1rem;
+  opacity:0;
+  &:hover{
+    opacity:1;
+  }
+`
+
 export const TodayNewsWrap = styled.div`
   width:100%;
   overflow:hidden;

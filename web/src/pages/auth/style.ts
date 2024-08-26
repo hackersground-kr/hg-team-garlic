@@ -28,7 +28,7 @@ export const LogoWrap = styled.div`
   box-sizing:border-box;
 `
 export const Logo = styled.img`
-  width:7rem;
+  width:14rem;
 `
 export const Title = styled.h1`
   font-size:3rem;

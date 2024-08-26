@@ -7,7 +7,7 @@ const Result = () => {
   return (
     <S.Container>
       <S.LogoWrap>
-        <S.Logo src="/assets/logo.svg" alt="" />
+        <S.Logo src="/assets/logo.png" alt="" />
         <S.Title>
           모든 검사가 끝났습니다. 이제 굿팜을 이용해 농촌에서 당신의 꿈을 펼치세요!
         </S.Title>

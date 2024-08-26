@@ -5,12 +5,14 @@ import useGetBooks from "../../hooks/books/useGetBooks";
 import * as S from "./style";
 import useGetLands from "../../hooks/lands/useGetLands";
 import useGetMe from "../../hooks/auth/useGetMe";
+import useGetLocation from "../../hooks/locations/useGetLocation";
 
 const Main = () => {
 
   const { ...book } = useGetBooks();
   const { ...land } = useGetLands();
   const { ...user } = useGetMe();
+  const { ...location } = useGetLocation();
 
   useEffect(()=>{
     user.getMe();
@@ -21,6 +23,7 @@ const Main = () => {
       land.getLands(user.user.analysis.location);
     }else{
       land.getLands('');
+      location.getLocation();
     }
     book.getBooks();
   },[user.user]);
@@ -34,10 +37,11 @@ const Main = () => {
       <S.SectionTitle>이런 지역은 어때요?</S.SectionTitle>
       <S.ProvinceWrap>
         <S.ProvinceScroll>
-          <S.ProvinceBox></S.ProvinceBox>
-          <S.ProvinceBox></S.ProvinceBox>
-          <S.ProvinceBox></S.ProvinceBox>
-          <S.ProvinceBox></S.ProvinceBox>
+          {location.locationData.map((item) => (
+            <S.ProvinceBox $url={item.logo}>
+              <S.ProvinceBoxHover>눌러서 지역 확인</S.ProvinceBoxHover>
+            </S.ProvinceBox>
+          ))}
         </S.ProvinceScroll>
       </S.ProvinceWrap>
       {land.landData.length > 0 && (
