@@ -1,0 +1,33 @@
+Index: server/src/main/resources/application-dev.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/src/main/resources/application-dev.yml b/server/src/main/resources/application-dev.yml
+new file mode 100644
+--- /dev/null	(date 1724693516450)
++++ b/server/src/main/resources/application-dev.yml	(date 1724693516450)
+@@ -0,0 +1,22 @@
++spring:
++  datasource:
++    url: jdbc:postgresql://goodfarm-db.postgres.database.azure.com:5432/goodfarm
++    username: garlic
++    password: qwer1234!!
++    driver-class-name: org.postgresql.Driver
++  jpa:
++    hibernate:
++      ddl-auto: validate
++  ai:
++    azure:
++      openai:
++        api-key: 7bf8a611-f048-4efd-a49c-e9e2efd5c306
++        endpoint: https://polite-ground-030dc3103.4.azurestaticapps.net/api/v1
++        chat:
++          options:
++            deployment-name: model-gpt4o-20240513
++jwt:
++  secret-key: Njasnfijuhui12he39jiasfhbjisdfiojASnfjasbdfiojo012ji9ehIHBAsjkdnkjsjdfopjsdjihf93j2oepkjiojnajksbfdIJAHfijahsdfihbuiju0912ujeujkasfnd
++  access-token-expiration: 3600000000
++news:
++  api-key: 01fa88b2379a4a8288a0108daf325508
+\ No newline at end of file

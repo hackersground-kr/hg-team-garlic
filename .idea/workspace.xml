@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b648193-1cdc-4f5b-ae47-609592d815fc" name="Changes" comment="wev" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/server">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="goodfarm-server" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="server" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jbj338033&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hackersground-kr/hg-team-garlic&quot;,
+    &quot;accountId&quot;: &quot;fdc7d837-de14-45c5-a62c-456d4c102b4c&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2lBF45zbD8DGVI9D0NcrPy6YIbA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.Build server.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.GoodFarmApplication.executor": "Run",
+    "Spring Boot.UiseongApplication.executor": "Run",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/dgsw52/Projects/OrganizationProjects/team-gar1ic/hg-team-garlic",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.github/workflows" />
+      <recent name="$PROJECT_DIR$/server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="GoodFarmApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="DATABASE_PASSWORD" value="Postg!@#" />
+        <env name="DATABASE_URL" value="jdbc:postgresql://garlicpostgresql.postgres.database.azure.com:5432/garlic" />
+        <env name="DATABASE_USERNAME" value="garlicpostgresql" />
+        <env name="JWT_SECRET_KEY" value="Mkasdfijio1234ijJANSjidnioj1304jjunAJISndfijnioj210ijundsjfnklnjkgnvjiansdiufhi12e" />
+        <env name="REDIS_HOST" value="localhost" />
+        <env name="REDIS_PASSWORD" value="uiseong" />
+        <env name="REDIS_PORT" value="6379" />
+        <env name="NEWS_API_KEY" value="01fa88b2379a4a8288a0108daf325508" />
+      </envs>
+      <module name="goodfarm-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.goodfarm.GoodFarmApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b648193-1cdc-4f5b-ae47-609592d815fc" name="Changes" comment="" />
+      <created>1724645369208</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724645369208</updated>
+      <workItem from="1724645371688" duration="11137000" />
+      <workItem from="1724658785107" duration="6720000" />
+      <workItem from="1724698374314" duration="6933000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: move">
+      <option name="closed" value="true" />
+      <created>1724645533607</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724645533607</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: move">
+      <option name="closed" value="true" />
+      <created>1724645665222</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724645665222</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: d">
+      <option name="closed" value="true" />
+      <created>1724653184145</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724653184145</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: suggest">
+      <option name="closed" value="true" />
+      <created>1724656281924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724656281924</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: server">
+      <option name="closed" value="true" />
+      <created>1724663773143</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724663773143</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: server">
+      <option name="closed" value="true" />
+      <created>1724663873579</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724663873579</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: server">
+      <option name="closed" value="true" />
+      <created>1724664006017</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724664006017</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: server">
+      <option name="closed" value="true" />
+      <created>1724664108571</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724664108571</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: server">
+      <option name="closed" value="true" />
+      <created>1724664182721</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724664182721</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: server">
+      <option name="closed" value="true" />
+      <created>1724698966748</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724698966748</updated>
+    </task>
+    <task id="LOCAL-00011" summary="wev">
+      <option name="closed" value="true" />
+      <created>1724710090013</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1724710090013</updated>
+    </task>
+    <task id="LOCAL-00012" summary="wev">
+      <option name="closed" value="true" />
+      <created>1724710137808</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1724710137808</updated>
+    </task>
+    <task id="LOCAL-00013" summary="wev">
+      <option name="closed" value="true" />
+      <created>1724710310871</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1724710310871</updated>
+    </task>
+    <task id="LOCAL-00014" summary="wev">
+      <option name="closed" value="true" />
+      <created>1724710366445</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1724710366445</updated>
+    </task>
+    <task id="LOCAL-00015" summary="wev">
+      <option name="closed" value="true" />
+      <created>1724711032860</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1724711032860</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: move" />
+    <MESSAGE value="feat: d" />
+    <MESSAGE value="feat: suggest" />
+    <MESSAGE value="feat: server" />
+    <MESSAGE value="wev" />
+    <option name="LAST_COMMIT_MESSAGE" value="wev" />
+  </component>
+</project>
