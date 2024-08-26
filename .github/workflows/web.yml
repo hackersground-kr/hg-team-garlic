@@ -1,9 +1,5 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy Node.js app to Azure Web App
 
-# Run the workflow whenever change is pushed into the main branch
 on:
   push:
     branches:
@@ -11,14 +7,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  # Builds the application for production.
-  # You should configure this environment as close as possible to the production environment, e.g. using Ubuntu for Linux apps, using the same Node version
   build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-
       - uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies, build, and test
@@ -31,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: bun-app
-          path: dist # This should be your distribution path, not the root path
+          path: web/dist # This should be your distribution path, not the root path
 
   # Deploy the application to Azure
   deploy:
@@ -51,7 +44,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: goodfarm-web
+          app-name: ${{ secrets.WEB_APP_NAME }}
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }} # Publish profile should always be stored as secrets in your repository Settings - Secrets and variables - Actions - secrets
           package: .
