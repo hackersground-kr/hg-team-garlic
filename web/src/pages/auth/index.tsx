@@ -10,7 +10,7 @@ const Auth = () => {
     <S.Container>
       <S.LogoWrap>
         <IonIcon name='chevron-back-outline' size='large' style={{fontSize:'1.7rem',alignSelf:'flex-start'}} onClick={()=>{navigate(-2)}}/>
-        <S.Logo src="/assets/logo.svg" alt="" />
+        <S.Logo src="/assets/logo.png" alt="" />
         <S.Title>슬기로운 농사 생활, 굿팜</S.Title>
       </S.LogoWrap>
       <S.ButtonWrap>

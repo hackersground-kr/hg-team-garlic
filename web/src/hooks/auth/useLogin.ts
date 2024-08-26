@@ -40,7 +40,6 @@ const useLogin = () => {
             `${import.meta.env.VITE_API_URL}/auth/login`,
             loginData
           );
-          setCookie("REFRESH_TOKEN", res.data.refreshToken, { path: "/", maxAge:2600000 });
           setCookie("ACCESS_TOKEN", res.data.accessToken, {
             path: "/",
             maxAge: 2600000,

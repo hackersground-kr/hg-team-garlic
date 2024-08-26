@@ -1,6 +1,5 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
-import { getCookie, removeCookie, setCookie } from "../cookies/cookie";
-import NotificationService from "../notification/NotificationService";
+import { getCookie } from "../cookies/cookie";
 
 interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
   _retry?: boolean;
@@ -45,37 +44,6 @@ instance.interceptors.response.use(
       originalRequest.headers["Content-Type"] = "multipart/form-data";
     } else {
       originalRequest.headers["Content-Type"] = "application/json";
-    }
-    if (originalRequest && !originalRequest._retry) {
-      originalRequest._retry = true;
-      const refreshToken = getCookie("REFRESH_TOKEN");
-      if (refreshToken) {
-        axios
-          .post(`${import.meta.env.VITE_API_URL}/auth/reissue`, {
-            refreshToken,
-          })
-          .then((response) => {
-            const newAccessToken = response.data.accessToken;
-            const newRefreshToken = response.data.refreshToken;
-
-            setCookie("ACCESS_TOKEN", newAccessToken, { path: "/", maxAge:2600000 });
-            setCookie("REFRESH_TOKEN", newRefreshToken, {
-              path: "/",
-              maxAge: "2600000",
-            });
-            originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
-          })
-          .catch((refreshError) => {
-            NotificationService.error("토큰이 만료되었습니다.");
-            setTimeout(() => {
-              window.location.href = "/login";
-            }, 100);
-            removeCookie("ACCESS_TOKEN");
-            removeCookie("REFRESH_TOKEN");
-            return Promise.reject(refreshError);
-          });
-      }
-      return instance(originalRequest);
     }
     return Promise.reject(error);
   }
