@@ -28,7 +28,9 @@ jobs:
           bun install
 
       - name: Build the app
-        run: bun run build
+        run: |
+          cd ./web
+          bun run build
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
