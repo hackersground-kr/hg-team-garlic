@@ -12,21 +12,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
+      - uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies, build, and test
         run: |
           cd web
-          npm i
-          npm run build
+          bun i
+          bun run build
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: node-app
+          name: bun-app
           path: web/dist # This should be your distribution path, not the root path
 
   # Deploy the application to Azure
@@ -41,7 +38,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: node-app
+          name: bun-app
 
       - name: Login to Azure
         uses: azure/login@v1
