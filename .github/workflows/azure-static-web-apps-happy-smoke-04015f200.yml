@@ -38,8 +38,8 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "./web/src" # 웹 애플리케이션 파일들이 위치한 경로
-          output_location: "./web/src/dist" # 빌드된 결과물의 경로
+          app_location: "/web/src" # 웹 애플리케이션 파일들이 위치한 경로
+          output_location: "/web/src/dist" # 빌드된 결과물의 경로
 
 
   close_pull_request_job:
