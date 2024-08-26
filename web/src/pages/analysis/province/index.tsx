@@ -31,7 +31,7 @@ const Province = () => {
         <S.Picture src='/assets/province.svg'/>
       </S.QuestionWrap>
       <S.InputWrap>
-        <S.Input placeholder='지역명을 입력하세요. ex) 의성군' value={answer} onChange={handleAnswer}/>
+        <S.Input placeholder='지역명을 입력하세요. ex) 의성군 없다면 아니오' value={answer} onChange={handleAnswer}/>
         <S.Next onClick={submit} disabled={loading}>{loading?"제출중...":"다음으로"}</S.Next>
       </S.InputWrap>
     </S.Container>
