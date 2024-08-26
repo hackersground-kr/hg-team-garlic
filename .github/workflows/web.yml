@@ -19,23 +19,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
+      - name: Install Bun
+        run: |
+          curl -fsSL https://bun.sh/install | bash
+          export BUN_INSTALL="$HOME/.bun"
+          export PATH="$BUN_INSTALL/bin:$PATH"
+          bun --version
 
       - name: Install dependencies, build, and test
         run: |
           cd web
-          npm install
-          npm run build --if-present
-          npm run test --if-present
-          # Other scripts if configured should be added here, such as linting, formating
+          bun i
+          bun run build
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: node-app
+          name: bun-app
           path: dist # This should be your distribution path, not the root path
 
   # Deploy the application to Azure
@@ -50,7 +50,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: node-app
+          name: bun-app
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
