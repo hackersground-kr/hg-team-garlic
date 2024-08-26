@@ -20,8 +20,8 @@ jobs:
       - name: Install Bun
         run: |
           curl -fsSL https://bun.sh/install | bash
-          echo "::add-path::${HOME}/.bun/bin"
-      
+          echo "$HOME/.bun/bin" >> $GITHUB_PATH
+
       - name: Install dependencies
         run: bun install
 
@@ -37,7 +37,7 @@ jobs:
           app_location: "/src" # 웹 애플리케이션 파일들이 위치한 경로
           output_location: "/src/dist" # 빌드된 결과물의 경로
 
-          
+
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
