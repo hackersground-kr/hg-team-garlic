@@ -28,7 +28,7 @@ public class Support {
     private String content;
 
     @Column(nullable = false)
-    private LocalDate deadline;
+    private String deadline;
 
     @Column(nullable = false)
     private String url;
