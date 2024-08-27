@@ -173,3 +173,9 @@ export const LandInfo = styled.div`
   flex-direction:column;
   justify-content:space-evenly;
 `
+
+export const SolutionWrap = styled.div`
+  width:100%;
+  padding: 2rem;
+  box-sizing:border-box;
+`
