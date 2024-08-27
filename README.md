@@ -55,7 +55,41 @@
 <img src="images/dbchap4.png"/>
 12. 대략 10분정도 기다리신다면 위와 같은 화면으로 서버가 생성 되십니다.
 
+### Docker 설정
+
+[Docker.io](https://www.docker.com/) (파란 버튼을 눌러 바로 이동하세요!)에 접속 해주세요!
+
+
+<img src="images/Docker1.png"/>
+1. Download for {자신의 OS} 버튼을 눌러 도커를 설치해주세요.
+
+<img src="images/Docker2.png"/>
+2. 다운로드에서 다운받은 Docker Desktop Installer 를 실행해주세요.
+
+
+<img src="images/dockerins1.png"/>
+
+3. 관리자 권한 요청이 들어오면 예 버튼을 눌러주세요
+
+<img src="images/dockerins2.png"/>
+4. 설치가 완료되면 close 버튼을 눌러주세요
+  
+<img src="images/icon.png"/>
+5. 바탕화면으로 이동후 도커 아이콘을 눌러 실행 해주세요.
+
+<img src="images/dockerins3.png"/>
+
+<img src="images/Docker3.png"/>
+
+6. 도커 화면이 정상적으로 뜬다면 SKIP TUTORIAL 버튼을 눌러주세요
+
+<img src="images/Docker4.png"/>
+7. 잠시 기다리신후 이러한 화면이 뜬다면 정상적으로 설치 되신겁니다!
+
+
+
 ### 사전 준비 사항
+- Docker
 - 터미널 또는 명령 프롬포트 (CMD)
   
 > **여러분의 제품/서비스를 Microsoft 애저 클라우드에 배포하기 위해 사전에 필요한 준비 사항들을 적어주세요.**
