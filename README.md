@@ -86,6 +86,137 @@
 <img src="images/Docker4.png"/>
 7. 잠시 기다리신후 이러한 화면이 뜬다면 정상적으로 설치 되신겁니다!
 
+# AZ 설치 및 로그인
+
+이제 터미널과 명령프롬포트 를 실행 하고 az를 설치합니다.
+
+윈도우인 경우 
+```Powershell
+winget install microsoft.azd
+```
+
+맥북인 경우
+
+```bash
+curl -fsSL https://aka.ms/install-azd.sh | bash
+```
+
+위 명령어를 쳐서 azd를 깔아줍니다.
+
+```bash
+az login
+```
+
+이제 아래 과정을 진행 해주세요. 
+# Homebrew 설치
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+# curl, git, java 설치
+
+```bash
+brew install curl git openjdk@21
+```
+
+# Java 환경 변수
+
+```bash
+echo 'export PATH="/usr/local/opt/openjdk@21/bin:$PATH"' >> ~/.bash_profile
+```
+
+```bash
+source ~/.bash_profile
+```
+
+# Java 환경 변수 (zshrc)
+
+```bash
+echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
+```
+
+```bash
+source ~/.zshrc
+```
+
+# clone
+
+```bash
+git clone https://github.com/hackersground-kr/hg-team-garlic.git
+```
+
+# cd hg-team-garlic
+
+```bash
+cd hg-team-garlic
+```
+
+# cd server
+
+```bash
+cd server
+```
+
+# build
+
+```bash
+./gradlew build
+```
+
+# install docker
+
+```bash
+brew install --cask docker
+```
+
+# docker build
+
+```bash
+docker build --platform linux/amd64 -t goodfarmserver .
+```
+
+# Azure 로그인
+
+```bash
+az login
+```
+
+# ACR 만들기
+
+```bash
+az acr create --resource-group <your_resource_group> --name <your_acr_name> --sku Basic
+```
+
+# 도커 이미지를 ACR에 푸시하기
+
+```jsx
+docker build --platform linux/amd64 -t goodfarmserver .
+```
+
+```bash
+docker tag goodfarmserver <your_acr_name>.azurecr.io/goodfarmserver:latest
+```
+
+```bash
+docker push <your_acr_name>.azurecr.io/goodfarmserver:latest
+```
+
+```jsx
+az acr login --name <your-acr-name>
+```
+
+# Environment 생성
+
+```bash
+az containerapp env create --name <your_environment_name> --resource-group <your-resource-group> --location koreacentral
+```
+
+# Azure Container Apps 에 배포하기
+
+```bash
+az containerapp create --name <your_app_name> --resource-group <your_resource_group> --image <your_acr_name>.azurecr.io/goodfarmserver:latest --environment <your_environment_name>
+```
 
 
 ### 사전 준비 사항
