@@ -25,7 +25,7 @@
 
 > **아래 제공하는 설치 방법을 통해 심사위원단이 여러분의 제품/서비스를 실제 Microsoft 애저 클라우드에 배포하고 설치할 수 있어야 합니다. 만약 아래 설치 방법대로 따라해서 배포 및 설치가 되지 않을 경우 본선에 진출할 수 없습니다.**
 
-## PostgreSQL 생성 및 설정
+### PostgreSQL 생성 및 설정
 
 > **사진을 참고하여 사친처럼 순서에 맞게 진행 해주세요!**
 [AZURE에서 POSTGRES SQL](https://portal.azure.com/#browse/Microsoft.DBforPostgreSQL%2Fservers) (파란 버튼을 누르면 바로 이동합니다.) 를 구성 합니다 
