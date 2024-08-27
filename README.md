@@ -83,6 +83,7 @@
 <img src="images/dockerins4.png"/>
 
 7. 잠시 기다리신후 이러한 화면이 뜬다면 정상적으로 설치 되신겁니다!
+<img src="images/Docker3.png"/>
 
 
 
