@@ -29,19 +29,8 @@ const useChat = (ref:RefObject<HTMLDivElement>) => {
         params: {message}
       });
       if(res){
-        if(res.data.response) {
-          setChatData((prev) => [...prev, res.data.response]);
-        }else if (res.data.answer){
-          setChatData((prev) => [...prev, res.data.answer]);
-        }else {
-          setChatData((prev)=>[...prev,'챗봇이 답을 찾지 못했어요. 나중에 다시 시도해 주세요.']);
-        }
-        
-        if(res.data.recommend) {
-          setRecommend(res.data.recommend);
-        }else{
-          setRecommend(res.data.recommand);
-        }
+        setChatData((prev) => [...prev, res.data.answer]);
+        setRecommend(res.data.recommendations);
       }
     }catch{
       setChatData((prev)=>[...prev,'챗봇 시스템에 에러가 발생했습니다.']);
