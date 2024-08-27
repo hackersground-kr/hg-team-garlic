@@ -78,12 +78,13 @@
 5. 바탕화면으로 이동후 도커 아이콘을 눌러 실행 해주세요.
 
 <img src="images/dockerins3.png"/>
+
+<img src="images/Docker3.png"/>
+
 6. 도커 화면이 정상적으로 뜬다면 SKIP TUTORIAL 버튼을 눌러주세요
 
-<img src="images/dockerins4.png"/>
-
+<img src="images/Docker4.png"/>
 7. 잠시 기다리신후 이러한 화면이 뜬다면 정상적으로 설치 되신겁니다!
-<img src="images/Docker3.png"/>
 
 
 
