@@ -71,16 +71,16 @@
 
 3. 관리자 권한 요청이 들어오면 예 버튼을 눌러주세요
 
-<img src="images/dockerins2.png"/>
+<img src="images/Dockerins2.png"/>
 4. 설치가 완료되면 close 버튼을 눌러주세요
   
 <img src="images/icon.png"/>
 5. 바탕화면으로 이동후 도커 아이콘을 눌러 실행 해주세요.
 
-<img src="images/dockerins3.png"/>
+<img src="images/Dockerins3.png"/>
 6. 도커 화면이 정상적으로 뜬다면 SKIP TUTORIAL 버튼을 눌러주세요
 
-<img src="images/dockerins4.png"/>
+<img src="images/Dockerins4.png"/>
 
 7. 잠시 기다리신후 이러한 화면이 뜬다면 정상적으로 설치 되신겁니다!
 
