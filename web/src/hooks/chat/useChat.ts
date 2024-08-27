@@ -30,7 +30,7 @@ const useChat = (ref:RefObject<HTMLDivElement>) => {
       });
       if(res){
         setChatData((prev) => [...prev, res.data.answer]);
-        setRecommend(res.data.recommend);
+        setRecommend(res.data.recommendations);
       }
     }catch{
       setChatData((prev)=>[...prev,'챗봇 시스템에 에러가 발생했습니다.']);
