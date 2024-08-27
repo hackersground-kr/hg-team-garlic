@@ -29,6 +29,8 @@
 > **사진에 표시된것 처럼 순서에 맞게 진행 해주세요!**
 [AZURE에서 POSTGRES SQL](https://portal.azure.com/#browse/Microsoft.DBforPostgreSQL%2Fservers) (파란 버튼을 누르면 바로 이동합니다.) 를 구성 합니다 
 
+## PostgreSQL 생성 및 설정
+
 <img src="images/dbchap1.png"/>
 1. 만들기 버튼을 눌러주세요! 
 
@@ -40,7 +42,7 @@
 5. 아래 까지 스크롤을 해주세요!
 6. 인증 - 인증 방법 창에서 PostgreSQL 인증만 버튼을 눌러 주세요
 7. 관리자 사용자 이름, 암호, 암호확인 란에 각각 내용을 입력해주세요.
-8. 다음: 네트워킹 > 버튼을 눌러 다음과정으로 이동 하세요1
+8. 다음: 네트워킹 > 버튼을 눌러 다음과정으로 이동 하세요.
 
 <img src="images/dbchap25.png"/>
 
